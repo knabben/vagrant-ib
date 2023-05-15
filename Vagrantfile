@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
       sysusrlocal_prefix: "/usr/local",
       load_additional_components: "",
       packer_build_name: "vmware",
-      node_custom_roles_pre: "stig cis"
+      node_custom_roles_post: "stig"
     }
   end
 
