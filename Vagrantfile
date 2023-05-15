@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.verbose = "v"
     ansible.playbook = "node.yml"
+
     ansible.extra_vars = {
       python_path: "/usr/bin",
       crictl_arch: "amd64",
@@ -38,7 +39,8 @@ Vagrant.configure("2") do |config|
       sysusr_prefix: "/usr",
       sysusrlocal_prefix: "/usr/local",
       load_additional_components: "",
-      packer_build_name: "vmware"
+      packer_build_name: "vmware",
+      node_custom_roles_pre: "stig cis"
     }
   end
 
