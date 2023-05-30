@@ -15,7 +15,7 @@
 - hosts: all
   become: yes
   vars:
-    node_custom_roles_post: "stig"
+    node_custom_roles_post: ""
     node_custom_roles_pre: ""
     custom_role_names: ""
     # stig

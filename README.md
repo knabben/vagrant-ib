@@ -10,3 +10,9 @@ Add a `node_custom_roles_pre` extra-vars and add your roles under the `ansible/r
 ## Default compliance roles
 
 Both `stig` and `cis` (level 2) Ansible custom roles are from [OpenSCAP project](https://www.open-scap.org/).
+
+## Running compliance with CINC Auditor
+
+```
+STIG_BASELINE="../cis-baseline" SSH_HOST=vagrant@localhost:2222 make audit
+```
