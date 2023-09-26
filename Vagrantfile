@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/focal64"
+  config.vm.box = "bento/ubuntu-22.04"
   
   config.vm.provision "ansible" do |ansible|
     ansible.verbose = "v"
